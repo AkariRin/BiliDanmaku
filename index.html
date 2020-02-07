@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>B站弹幕监控</title>
+    <link rel="shortcut icon" href="https://www.bilibili.com/favicon.ico">
+    <link rel="icon" href="https://www.bilibili.com/favicon.ico">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155302837-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-155302837-2');
+    </script>
+  </head>
+  <body>
+    <div id="app">
+    <!-- 顶部工具栏 -->
+    <div class="mdui-toolbar mdui-color-blue">
+      <span class="mdui-typo-title">B站弹幕监控</span>
+      <div class="mdui-toolbar-spacer"></div>
+      <a href="https://github.com/Fader10/BiliDanmaku" target="_blank"><button class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '在GitHub上查看源代码'}"><i class="fa fa-github" aria-hidden="true"></i></button></a>
+      <i class="mdui-icon material-icons"></i>
+    </div>
+    <br><br>
+    <div class="mdui-container">
+    <div class="mdui-row">
+    <div class="mdui-col-xs-8 mdui-col-offset-xs-2">
+    <div class="mdui-panel mdui-shadow-10 mdui-hoverable" mdui-panel>
+
+      <div class="mdui-panel-item" v-for="item in danmaku">
+      <div class="mdui-panel-item-header">
+        <div class="mdui-panel-item-title">{{item.title}}</div>
+        <div class="mdui-panel-item-summary">房间号：{{item.roomID}}</div>
+        <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-panel-item-body">
+        <p>类型：{{item.title}}</p>
+        <p>房间号：{{item.roomID}}</p>
+        <p>id：{{item.id}}</p>
+        <div class="mdui-panel-item-actions">
+          <a :href="roomHref(item.roomID)" target="_blank"><button class="mdui-btn mdui-ripple mdui-color-pink">前往直播间</button></a>
+        </div>
+      </div>
+    </div>
+
+    </div>
+    </div>
+    </div>
+    <a href="#app"><button class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-red"><i class="mdui-icon material-icons">arrow_upward</i></button></a>
+    </div>
+    </div>
+    </div>
+    <link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
