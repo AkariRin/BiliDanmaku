@@ -19,8 +19,6 @@
     <div class="mdui-toolbar mdui-color-blue">
       <span class="mdui-typo-title">B站弹幕监控</span>
       <div class="mdui-toolbar-spacer"></div>
-      <button class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '弹幕监控节点'}"><i class="fa fa-server"></i></button>
-      <i class="mdui-icon material-icons"></i>
       <a href="https://github.com/Fader10/BiliDanmaku" target="_blank"><button class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '在GitHub上查看源代码'}"><i class="fa fa-github" aria-hidden="true"></i></button></a>
       <i class="mdui-icon material-icons"></i>
     </div>
@@ -73,7 +71,7 @@
         //创建时弹出snackbar
         created: function () {
           mdui.snackbar({
-          message: '正在连接到默认服务器......',
+          message: '正在连接到弹幕服务器......',
           position: 'right-top',
           timeout: '1000'
           });
