@@ -1,10 +1,11 @@
 const path = require('path')
+const htmlWebpackPlugin = require("html-webpack-plugin");
 
 const config = {
   
   entry: './main.js',
   output: {
-    filename: 'app.js',
+    filename: 'app-[hash:8].js',
     path: path.join(__dirname, 'dist')
   },
   module: {
@@ -18,14 +19,27 @@ const config = {
             presets: ['@babel/preset-env']
           }
         }
+      },
+      {
+        test: /\.(html)$/,
+        use: {
+          loader: 'html-loader'
+        }
       }
     ]
   },
-  resolve: {
-    alias: {
-      vue: 'vue/dist/vue.esm.js'
-    }
-   }
+  plugins: [
+    new htmlWebpackPlugin({
+        template: './index.html',
+        filename: 'index.html',
+        inject: 'body',
+        minify:{
+            collapseWhitespace:true,
+            removeComments:true,
+            removeAttributeQuotes:true
+        }
+    })
+  ]
 }
 
 module.exports = config;
