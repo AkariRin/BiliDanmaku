@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import mdui from 'mdui';
 const conf = require('./config')
 
 //创建vue实例
@@ -26,21 +27,21 @@ var app = new Vue({
 //创建websocket连接
 const ws = new WebSocket(conf.ip, conf.protocol);
 
-ws.onopen = function(event) {
+ws.onopen = function() {
   mdui.snackbar({
     message: '连接成功',
     position: 'right-top',
     timeout: '1000'
   });
 };
-ws.onclose = function(event) {
+ws.onclose = function() {
   mdui.snackbar({
     message: '已关闭连接',
     position: 'right-top',
     timeout: '1000'
   });
 };
-ws.onerror = function(event) {
+ws.onerror = function() {
   mdui.snackbar({
     message: '连接失败',
     position: 'right-top',
@@ -54,9 +55,9 @@ ws.onerror = function(event) {
 ws.onmessage = function (event) {
   var data = JSON.parse(event.data);
   //删除最开始的一条sysmsg
-  if(data.cmd == "sysmsg"){
-    data = NULL
+  if(data.cmd != "sysmsg"){
+    //推送到vue实例中
+    app.danmaku.push(data)
   }
-  //推送到vue实例中
-  app.danmaku.push(data)
+
 }
