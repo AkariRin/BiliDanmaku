@@ -1,6 +1,7 @@
 # BiliDanmaku
 
 B站弹幕监控
+
 [![Build Status](https://travis-ci.com/Fader10/BiliDanmaku.svg?branch=master)](https://travis-ci.com/Fader10/BiliDanmaku)
 
 ## 安装依赖
@@ -27,4 +28,4 @@ npm run build
 
 ## Google Analytics
 
-本仓库源码已添加谷歌分析代码，如需删除，请删除index.html中的head标签内的谷歌分析代码
+本仓库源码已添加谷歌分析代码，如需删除，请删除public/index.html中的head标签内的谷歌分析代码
