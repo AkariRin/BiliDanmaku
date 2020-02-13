@@ -32,4 +32,4 @@ npm run build
 
 ## 我很可爱，请给我钱QWQ
 
-<iframe id="afdian_leaflet_TT702" class="afdian_iframe" src="https://afdian.net/leaflet?slug=TT702" width="420" scrolling="no" height="240" frameborder="0"></iframe>
+<iframe src="https://afdian.net/leaflet?slug=Fader10" width="420" scrolling="no" height="240" frameborder="0"> </iframe>
