@@ -29,3 +29,7 @@ npm run build
 ## Google Analytics
 
 本仓库源码已添加谷歌分析代码，如需删除，请删除public/index.html中的head标签内的谷歌分析代码
+
+## SSL
+
+由于后端服务器的问题，本站暂未部署wss，预计将于八月实现nginx加密代理
