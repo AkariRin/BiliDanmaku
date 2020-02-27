@@ -2,7 +2,7 @@
 
 B站弹幕监控
 
-[![Build Status](https://travis-ci.com/Fader10/BiliDanmaku.svg?branch=master)](https://travis-ci.com/Fader10/BiliDanmaku)
+[![Build Status](https://travis-ci.com/AkariRin/BiliDanmaku.svg?branch=master)](https://travis-ci.com/AkariRin/BiliDanmaku)
 
 ## 安装依赖
 
