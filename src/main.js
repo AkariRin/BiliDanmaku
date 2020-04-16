@@ -19,7 +19,7 @@ var app = new Vue({
   methods: {
     //返回带房间号的href地址
     roomHref:function(id){
-      return 'https://live.bilibili.com/' + id
+      return `https://live.bilibili.com/${id}`
     }
   }
 })
@@ -46,9 +46,6 @@ ws.onerror = function() {
     message: '连接失败',
     position: 'right-top',
     timeout: '1000',
-    onClose: function(){
-      //do sth
-    }
   });
 };
 //处理websocket消息
