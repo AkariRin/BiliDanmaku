@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "mdui": "^0.4.3",
+    "mdui": "^1.0.1",
     "vue": "^2.6.11"
   },
   "devDependencies": {
